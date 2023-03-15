@@ -1,0 +1,9 @@
+
+version: 2
+
+models:
+  - name: target_crm__feed1
+    tests:
+      - scd2_nonoverlappingrecords:
+          key_column_name: key
+

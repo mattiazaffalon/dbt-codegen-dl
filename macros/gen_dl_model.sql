@@ -17,8 +17,10 @@
 select 
     {% for column in columns %}
         {%- set transformed_value -%}
-            {%- if column.meta['value-extract-sql'] is defined -%}
-                {{ column.meta['value-extract-sql'] }}
+            {%- if column.meta['transform-sql'] is defined -%}
+                {{ column.meta['transform-sql'] | replace("<columnname>", column.name) }}
+            {%- elif column.meta['transform-macro'] is defined -%}
+                {{'{{ '}}{{ column.meta['transform-macro'] | replace("<columnname>", "'" ~ column.name ~ "'") }}{{' }}'}}
             {%- else -%}
                 {{ column.name }}
             {%- endif -%}
@@ -31,9 +33,14 @@ select
                 {{ transformed_value }}
             {%- endif -%}
         {%- endset -%}
-        {{ casted_value ~ ' as ' ~ column.name }}{{ "," if not loop.last }}
-    {% endfor %}
-from {{'{{'}}  source('{{ source_name }}', '{{ source_relation }}')  {{'}}'}}
+        {{ casted_value ~ ' as ' ~ column.name }},
+    {% endfor -%}
+    dbt_scd_id,
+    dbt_updated_at,
+    dbt_valid_from,
+    dbt_valid_to
+from {{'{{'}}  ref('{{ snapshot_name }}')  {{'}}'}}
+
 
 {%- endset %}
 {{ print(base_model_sql) }}
@@ -52,10 +59,12 @@ from {{'{{'}}  source('{{ source_name }}', '{{ source_relation }}')  {{'}}'}}
       updated_at='{{ source['meta']['timestamp-column'] }}',
     )
 {{'}}'}}
-{{'{% endsnapshot %}'}}
 
 select *
-from {{'{{'}} ref('{{ base_model_name }}') {{'}}'}}
+from {{'{{'}}  source('{{ source_name }}', '{{ source_relation }}')  {{'}}'}}
+
+
+{{'{% endsnapshot %}'}}
 
 {%- endset %}
 
@@ -66,9 +75,25 @@ from {{'{{'}} ref('{{ base_model_name }}') {{'}}'}}
 
 {%- set mart_sql -%}
 select *
-from {{'{{'}} ref('{{ snapshot_name }}') {{'}}'}}
+from {{'{{'}} ref('{{ base_model_name }}') {{'}}'}}
 {%- endset %}
 
 {{ print(mart_sql) }}
+
+
+{% set module_meta = module_tag ~ ' {"type": "config", "filename": "' ~ target_name ~ '.yml"}\n'   %}
+{{ print(module_meta) }}
+
+{%- set target_model_config -%}
+version: 2
+
+models:
+  - name: {{ target_name }}
+    tests:
+      - scd2_nonoverlappingrecords:
+          key_column_name: {{ source['meta']['key-column'] }}
+{%- endset %}
+
+{{ print(target_model_config) }}
 
 {% endmacro %}

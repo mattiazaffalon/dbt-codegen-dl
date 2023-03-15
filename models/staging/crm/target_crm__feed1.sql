@@ -1,4 +1,5 @@
 
 select *
-from {{ ref('crm__feed1_snapshot') }}
+from {{ ref('base_crm__feed1') }}
+
 

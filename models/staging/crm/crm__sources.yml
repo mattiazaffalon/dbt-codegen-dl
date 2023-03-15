@@ -11,19 +11,26 @@ sources:
               skip_leading_rows: 1
               field_delimiter: ","
         meta:
-          load-strategy: scd2
           key-column: key
           timestamp-column: last_upd
-
+          load-strategy: scd2
         columns:
           - name: key
             data_type: string
-          - name: othercolumn
+            tests:
+              - not_null
+              - unique
+          - name: numeric_column
             data_type: string
             meta:
-              value-extract-sql: REPLACE(othercolumn, ',', '.')
+              transform-sql: REPLACE(<columnname>, ',', '.')
               target-type: numeric
-          - name: last_upd
+          - name: ts_column
             data_type: string
+            meta:
+              transform-macro: read_ts_at_timezone(<columnname>, 'UTC+1')
+              target-type: timestamp
+          - name: last_upd
+            data_type: datetime
             meta:
               target-type: datetime

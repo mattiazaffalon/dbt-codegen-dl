@@ -6,9 +6,11 @@
 
 select 
     key as key,
-    cast(REPLACE(othercolumn, ',', '.') as numeric) as othercolumn,
-    cast(last_upd as datetime) as last_upd
-    
-from {{  source('crm', 'feed1')  }}
-
-
+    cast(REPLACE(numeric_column, ',', '.') as numeric) as numeric_column,
+    cast({{ read_ts_at_timezone('ts_column', 'UTC+1') }} as timestamp) as ts_column,
+    cast(last_upd as datetime) as last_upd,
+    dbt_scd_id,
+    dbt_updated_at,
+    dbt_valid_from,
+    dbt_valid_to
+from {{  ref('crm__feed1_snapshot')  }}

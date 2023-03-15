@@ -9,9 +9,11 @@
       updated_at='last_upd',
     )
 }}
-{% endsnapshot %}
 
 select *
-from {{ ref('base_crm__feed1') }}
+from {{  source('crm', 'feed1')  }}
+
+
+{% endsnapshot %}
 
 
