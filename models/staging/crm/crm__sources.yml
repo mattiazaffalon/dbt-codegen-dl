@@ -4,6 +4,12 @@ sources:
 
     tables:
       - name: feed1
+        external:
+            location: "gs://dbt-codegen-dl/crm/feed1/*.csv"
+            options:
+              format: "CSV"
+              skip_leading_rows: 1
+              field_delimiter: ","
         meta:
           load-strategy: scd2
           key-column: key
@@ -11,13 +17,13 @@ sources:
 
         columns:
           - name: key
-            type: string
+            data_type: string
           - name: othercolumn
-            type: string
+            data_type: string
             meta:
               value-extract-sql: REPLACE(othercolumn, ',', '.')
-              target-type: number
+              target-type: numeric
           - name: last_upd
-            type: string
+            data_type: string
             meta:
               target-type: datetime

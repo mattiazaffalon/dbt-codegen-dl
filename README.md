@@ -1,9 +1,17 @@
 # dbt-codegen-dl
 
+## Init the project
+```bash
+dbt deps
+```
+
 ## Launching model generation macro
 ```bash
-dbt run-operation gen_dl_model --args '{"source_name": "crm", "source_relation": "feed1"}'
+bin/gen_dl_model.sh --forceoverwrite models/staging/crm/crm__sources.yml crm feed1
 ```
+
+## Running the generated models
+
 
 ## Development
 

@@ -6,7 +6,7 @@ version: '0.1.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'dev'
+profile: 'dbt_codegen_dl'
 
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be

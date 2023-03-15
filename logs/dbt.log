@@ -2805,3 +2805,983 @@ from {{  source('crm', 'feed1')  }}
 [0m15:05:23.884430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a886573a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a882c4100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a882c40a0>]}
 [0m15:05:23.884897 [debug] [MainThread]: Flushing usage events
 [0m15:05:24.610984 [debug] [MainThread]: Connection 'macro_gen_dl_model' was properly closed.
+
+
+============================== 2023-03-15 08:22:42.599931 | d29cc685-9996-4aa0-bf7f-0fa2b38e05c7 ==============================
+[0m08:22:42.599931 [info ] [MainThread]: Running with dbt=1.4.1
+[0m08:22:42.602193 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m08:22:42.602476 [debug] [MainThread]: Tracking: tracking
+[0m08:22:42.617926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f052e1bbee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f052e15f2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f052e15f2b0>]}
+[0m08:22:42.637933 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m08:22:42.638443 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd29cc685-9996-4aa0-bf7f-0fa2b38e05c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f052e15fa60>]}
+[0m08:22:43.464232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd29cc685-9996-4aa0-bf7f-0fa2b38e05c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f052e15f220>]}
+[0m08:22:43.469014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd29cc685-9996-4aa0-bf7f-0fa2b38e05c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f052defe5b0>]}
+[0m08:22:43.470367 [debug] [MainThread]: Acquiring new bigquery connection 'macro_gen_dl_model'
+[0m08:22:43.481807 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f052e1bbee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f052de40a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f052de40280>]}
+[0m08:22:43.482292 [debug] [MainThread]: Flushing usage events
+[0m08:22:44.154408 [debug] [MainThread]: Connection 'macro_gen_dl_model' was properly closed.
+
+
+============================== 2023-03-15 08:58:31.839455 | 81095fa4-7e21-41a9-9bb4-66213fe3e2ec ==============================
+[0m08:58:31.839455 [info ] [MainThread]: Running with dbt=1.4.1
+[0m08:58:31.840910 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m08:58:31.841258 [debug] [MainThread]: Tracking: tracking
+[0m08:58:31.852104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f484a8a1e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f484a8a1eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f484a849220>]}
+[0m08:58:31.894000 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m08:58:31.894459 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://macros/gen_dl_model.sql
+[0m08:58:31.913451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '81095fa4-7e21-41a9-9bb4-66213fe3e2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f484a5205e0>]}
+[0m08:58:31.918544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '81095fa4-7e21-41a9-9bb4-66213fe3e2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f484a5696d0>]}
+[0m08:58:31.919812 [debug] [MainThread]: Acquiring new bigquery connection 'macro_gen_dl_model'
+[0m08:58:31.931168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f484a8a1e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f484a4b0880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f484a4b08b0>]}
+[0m08:58:31.931604 [debug] [MainThread]: Flushing usage events
+[0m08:58:32.770357 [debug] [MainThread]: Connection 'macro_gen_dl_model' was properly closed.
+
+
+============================== 2023-03-15 09:01:13.235661 | b5440db9-ce50-43b8-87a1-6309dca45198 ==============================
+[0m09:01:13.235661 [info ] [MainThread]: Running with dbt=1.4.1
+[0m09:01:13.236990 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m09:01:13.237232 [debug] [MainThread]: Tracking: tracking
+[0m09:01:13.247996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d66f3ce80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d66f3cee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d66ee0250>]}
+[0m09:01:13.289066 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m09:01:13.289735 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://macros/gen_dl_model.sql
+[0m09:01:13.309627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b5440db9-ce50-43b8-87a1-6309dca45198', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d66bb5610>]}
+[0m09:01:13.314707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b5440db9-ce50-43b8-87a1-6309dca45198', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d66c09700>]}
+[0m09:01:13.315959 [debug] [MainThread]: Acquiring new bigquery connection 'macro_gen_dl_model'
+[0m09:01:13.327420 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d66f3ce80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d66b48b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d66b48c70>]}
+[0m09:01:13.327770 [debug] [MainThread]: Flushing usage events
+[0m09:01:14.132422 [debug] [MainThread]: Connection 'macro_gen_dl_model' was properly closed.
+
+
+============================== 2023-03-15 09:04:40.463154 | 06640f02-ca9b-4023-b393-e08f8df65a8e ==============================
+[0m09:04:40.463154 [info ] [MainThread]: Running with dbt=1.4.1
+[0m09:04:40.464599 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m09:04:40.464925 [debug] [MainThread]: Tracking: tracking
+[0m09:04:40.475448 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c0e1ebd30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c0e1ebfa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c0e195130>]}
+[0m09:04:40.513654 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m09:04:40.514340 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://macros/gen_dl_model.sql
+[0m09:04:40.535195 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '06640f02-ca9b-4023-b393-e08f8df65a8e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c0de6a4c0>]}
+[0m09:04:40.540333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '06640f02-ca9b-4023-b393-e08f8df65a8e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c0de3be50>]}
+[0m09:04:40.541623 [debug] [MainThread]: Acquiring new bigquery connection 'macro_gen_dl_model'
+[0m09:04:40.553205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c0e1ebd30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c0ddfaa30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c0ddfa8e0>]}
+[0m09:04:40.553699 [debug] [MainThread]: Flushing usage events
+[0m09:04:41.315266 [debug] [MainThread]: Connection 'macro_gen_dl_model' was properly closed.
+
+
+============================== 2023-03-15 09:07:15.230723 | 77225dc7-6b98-4492-bc4a-569ed5c7ab04 ==============================
+[0m09:07:15.230723 [info ] [MainThread]: Running with dbt=1.4.1
+[0m09:07:15.232071 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m09:07:15.232413 [debug] [MainThread]: Tracking: tracking
+[0m09:07:15.241908 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff91cce90d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff91cce9490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff91cce9130>]}
+[0m09:07:15.281645 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m09:07:15.282390 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://macros/gen_dl_model.sql
+[0m09:07:15.302258 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '77225dc7-6b98-4492-bc4a-569ed5c7ab04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff91c9c1820>]}
+[0m09:07:15.307321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '77225dc7-6b98-4492-bc4a-569ed5c7ab04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff91c9fbe80>]}
+[0m09:07:15.308576 [debug] [MainThread]: Acquiring new bigquery connection 'macro_gen_dl_model'
+[0m09:07:15.320374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff91cce90d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff91c9548e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff91c954340>]}
+[0m09:07:15.320872 [debug] [MainThread]: Flushing usage events
+[0m09:07:16.142013 [debug] [MainThread]: Connection 'macro_gen_dl_model' was properly closed.
+
+
+============================== 2023-03-15 09:08:31.175715 | a4856359-6f41-42f6-833c-74addfd86314 ==============================
+[0m09:08:31.175715 [info ] [MainThread]: Running with dbt=1.4.1
+[0m09:08:31.177110 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m09:08:31.177365 [debug] [MainThread]: Tracking: tracking
+[0m09:08:31.184800 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8679bc9a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8679bc9dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8679bc9a60>]}
+[0m09:08:31.213261 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:08:31.213538 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:08:31.218431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a4856359-6f41-42f6-833c-74addfd86314', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f867989d520>]}
+[0m09:08:31.223139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a4856359-6f41-42f6-833c-74addfd86314', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8679916dc0>]}
+[0m09:08:31.224407 [debug] [MainThread]: Acquiring new bigquery connection 'macro_gen_dl_model'
+[0m09:08:31.235970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8679bc9a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f86798bb9a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f86798bb880>]}
+[0m09:08:31.236310 [debug] [MainThread]: Flushing usage events
+[0m09:08:31.927487 [debug] [MainThread]: Connection 'macro_gen_dl_model' was properly closed.
+
+
+============================== 2023-03-15 09:42:35.953498 | 2e43698b-8efa-4fda-bbbd-ab999e1e6bb9 ==============================
+[0m09:42:35.953498 [info ] [MainThread]: Running with dbt=1.4.1
+[0m09:42:35.957214 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m09:42:35.957421 [debug] [MainThread]: Tracking: tracking
+[0m09:42:35.964768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4aab4e2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4aab4e6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4aab4e340>]}
+[0m09:42:35.993237 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:42:35.993505 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:42:35.998439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2e43698b-8efa-4fda-bbbd-ab999e1e6bb9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4aa814dc0>]}
+[0m09:42:36.003096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2e43698b-8efa-4fda-bbbd-ab999e1e6bb9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4aa8816a0>]}
+[0m09:42:36.004342 [debug] [MainThread]: Acquiring new bigquery connection 'macro_gen_dl_model'
+[0m09:42:36.015846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4aab4e2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4aa7b5c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4aa7b5b20>]}
+[0m09:42:36.016187 [debug] [MainThread]: Flushing usage events
+[0m09:42:36.715696 [debug] [MainThread]: Connection 'macro_gen_dl_model' was properly closed.
+
+
+============================== 2023-03-15 09:42:48.344262 | 735336d2-2f13-40b9-8bf3-05d408efebfa ==============================
+[0m09:42:48.344262 [info ] [MainThread]: Running with dbt=1.4.1
+[0m09:42:48.345535 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m09:42:48.345737 [debug] [MainThread]: Tracking: tracking
+[0m09:42:48.353222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3f163a5160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3f163a5520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3f163a51c0>]}
+[0m09:42:48.382308 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 3 files added, 0 files changed.
+[0m09:42:48.382692 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/target_crm__feed1.sql
+[0m09:42:48.382933 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://snapshots/crm/crm__feed1_snapshot.sql
+[0m09:42:48.383145 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/base/base_crm__feed1.sql
+[0m09:42:48.394959 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/target_crm__feed1.sql
+[0m09:42:48.405283 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/base/base_crm__feed1.sql
+[0m09:42:48.424106 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3f157cd220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3f16083af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3f16083b50>]}
+[0m09:42:48.424435 [debug] [MainThread]: Flushing usage events
+[0m09:42:49.089732 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_codegen_dl.target_crm__feed1' (models/staging/crm/target_crm__feed1.sql) depends on a node named 'crm__feed1_snapshot' which was not found
+
+
+============================== 2023-03-15 09:47:08.255143 | 7b3f6478-0090-4365-9def-cc2e4f7fe3a8 ==============================
+[0m09:47:08.255143 [info ] [MainThread]: Running with dbt=1.4.1
+[0m09:47:08.256428 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m09:47:08.256655 [debug] [MainThread]: Tracking: tracking
+[0m09:47:08.263943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74199caf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f741996d310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f741996d2e0>]}
+[0m09:47:08.297144 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 3 files added, 1 files changed.
+[0m09:47:08.297567 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/target_crm__feed1.sql
+[0m09:47:08.297835 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://snapshots/crm/crm__feed1_snapshot.sql
+[0m09:47:08.298075 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/base/base_crm__feed1.sql
+[0m09:47:08.298359 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://macros/gen_dl_model.sql
+[0m09:47:08.321174 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/target_crm__feed1.sql
+[0m09:47:08.331460 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/base/base_crm__feed1.sql
+[0m09:47:08.350004 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7418d9b970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f741968fc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f74195d73d0>]}
+[0m09:47:08.350348 [debug] [MainThread]: Flushing usage events
+[0m09:47:09.143835 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_codegen_dl.target_crm__feed1' (models/staging/crm/target_crm__feed1.sql) depends on a node named 'crm__feed1_snapshot' which was not found
+
+
+============================== 2023-03-15 09:47:36.641222 | 9c8925e8-04db-4268-8611-5c66a9614a57 ==============================
+[0m09:47:36.641222 [info ] [MainThread]: Running with dbt=1.4.1
+[0m09:47:36.643154 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m09:47:36.643377 [debug] [MainThread]: Tracking: tracking
+[0m09:47:36.650745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2388e15b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2388e15ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2388e15b80>]}
+[0m09:47:36.685003 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 3 files added, 1 files changed.
+[0m09:47:36.685389 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://snapshots/crm/crm__feed1_snapshot.sql
+[0m09:47:36.685669 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/target_crm__feed1.sql
+[0m09:47:36.685900 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/base/base_crm__feed1.sql
+[0m09:47:36.686185 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://macros/gen_dl_model.sql
+[0m09:47:36.708884 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/target_crm__feed1.sql
+[0m09:47:36.719607 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/base/base_crm__feed1.sql
+[0m09:47:36.737815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f238825d520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2388b40c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2388a99070>]}
+[0m09:47:36.738159 [debug] [MainThread]: Flushing usage events
+[0m09:47:37.407988 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_codegen_dl.target_crm__feed1' (models/staging/crm/target_crm__feed1.sql) depends on a node named 'crm__feed1_snapshot' which was not found
+
+
+============================== 2023-03-15 09:47:58.944066 | f10f167e-45ef-438a-802e-e083727133bf ==============================
+[0m09:47:58.944066 [info ] [MainThread]: Running with dbt=1.4.1
+[0m09:47:58.945304 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m09:47:58.945539 [debug] [MainThread]: Tracking: tracking
+[0m09:47:58.952776 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efe21afddf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efe21afde50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efe21aa21f0>]}
+[0m09:47:58.982821 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 1 files changed.
+[0m09:47:58.983207 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/base/base_crm__feed1.sql
+[0m09:47:58.983479 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/target_crm__feed1.sql
+[0m09:47:58.983772 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://macros/gen_dl_model.sql
+[0m09:47:59.006870 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/base/base_crm__feed1.sql
+[0m09:47:59.016774 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/target_crm__feed1.sql
+[0m09:47:59.018753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efe217076d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efe217b6e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efe21711100>]}
+[0m09:47:59.019151 [debug] [MainThread]: Flushing usage events
+[0m09:47:59.636514 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_codegen_dl.target_crm__feed1' (models/staging/crm/target_crm__feed1.sql) depends on a node named 'crm__feed1_snapshot' which was not found
+
+
+============================== 2023-03-15 09:55:25.183016 | b7d19908-ceea-4d45-b64b-0116f5baba11 ==============================
+[0m09:55:25.183016 [info ] [MainThread]: Running with dbt=1.4.1
+[0m09:55:25.184278 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m09:55:25.184481 [debug] [MainThread]: Tracking: tracking
+[0m09:55:25.191715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc79948160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc79948520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc799481c0>]}
+[0m09:55:25.220795 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 1 files changed.
+[0m09:55:25.221175 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/target_crm__feed1.sql
+[0m09:55:25.221426 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/base/base_crm__feed1.sql
+[0m09:55:25.221748 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://macros/gen_dl_model.sql
+[0m09:55:25.244525 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/target_crm__feed1.sql
+[0m09:55:25.254404 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/base/base_crm__feed1.sql
+[0m09:55:25.256028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc795ae640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc795b8430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc795b8340>]}
+[0m09:55:25.256320 [debug] [MainThread]: Flushing usage events
+[0m09:55:25.983757 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_codegen_dl.target_crm__feed1' (models/staging/crm/target_crm__feed1.sql) depends on a node named 'crm__feed1_snapshot' which was not found
+
+
+============================== 2023-03-15 09:55:51.171784 | 585d858c-a876-4e11-aa05-da7cb7fef64d ==============================
+[0m09:55:51.171784 [info ] [MainThread]: Running with dbt=1.4.1
+[0m09:55:51.173058 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m09:55:51.173271 [debug] [MainThread]: Tracking: tracking
+[0m09:55:51.180504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feca5a1a370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feca5a1a730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feca5a1a3d0>]}
+[0m09:55:51.209472 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 1 files changed.
+[0m09:55:51.209866 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/target_crm__feed1.sql
+[0m09:55:51.210126 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/base/base_crm__feed1.sql
+[0m09:55:51.210417 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://macros/gen_dl_model.sql
+[0m09:55:51.233111 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/target_crm__feed1.sql
+[0m09:55:51.243103 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/base/base_crm__feed1.sql
+[0m09:55:51.244715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feca57323d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feca568b670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feca568b580>]}
+[0m09:55:51.245028 [debug] [MainThread]: Flushing usage events
+[0m09:55:51.869790 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_codegen_dl.target_crm__feed1' (models/staging/crm/target_crm__feed1.sql) depends on a node named 'crm__feed1_snapshot' which was not found
+
+
+============================== 2023-03-15 09:56:39.695333 | fcde2f56-411d-4ada-abc6-3136b0cb7137 ==============================
+[0m09:56:39.695333 [info ] [MainThread]: Running with dbt=1.4.1
+[0m09:56:39.696600 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m09:56:39.696811 [debug] [MainThread]: Tracking: tracking
+[0m09:56:39.704037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96e0877190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96e0877550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96e08771f0>]}
+[0m09:56:39.733665 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 1 files changed.
+[0m09:56:39.734042 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/base/base_crm__feed1.sql
+[0m09:56:39.734294 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/target_crm__feed1.sql
+[0m09:56:39.734566 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://macros/gen_dl_model.sql
+[0m09:56:39.757862 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/base/base_crm__feed1.sql
+[0m09:56:39.767746 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/target_crm__feed1.sql
+[0m09:56:39.769346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96e04dc670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96e04e6430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96e04e6370>]}
+[0m09:56:39.769653 [debug] [MainThread]: Flushing usage events
+[0m09:56:40.559932 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_codegen_dl.target_crm__feed1' (models/staging/crm/target_crm__feed1.sql) depends on a node named 'crm__feed1_snapshot' which was not found
+
+
+============================== 2023-03-15 09:57:56.136349 | a6f8e8e4-23ae-491c-b9df-1b404d0a0cf9 ==============================
+[0m09:57:56.136349 [info ] [MainThread]: Running with dbt=1.4.1
+[0m09:57:56.137645 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m09:57:56.137878 [debug] [MainThread]: Tracking: tracking
+[0m09:57:56.145195 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6c8d3ca0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6c8d3ca490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6c8d3ca130>]}
+[0m09:57:56.174345 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 1 files changed.
+[0m09:57:56.174732 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/target_crm__feed1.sql
+[0m09:57:56.174994 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/base/base_crm__feed1.sql
+[0m09:57:56.175283 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://macros/gen_dl_model.sql
+[0m09:57:56.198111 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/target_crm__feed1.sql
+[0m09:57:56.208153 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/base/base_crm__feed1.sql
+[0m09:57:56.209824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6c8d02e5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6c8d0383a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6c8d0382b0>]}
+[0m09:57:56.210130 [debug] [MainThread]: Flushing usage events
+[0m09:57:56.879288 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_codegen_dl.target_crm__feed1' (models/staging/crm/target_crm__feed1.sql) depends on a node named 'crm__feed1_snapshot' which was not found
+
+
+============================== 2023-03-15 09:59:00.728718 | f59c0ad8-ce76-4596-be60-56088911082e ==============================
+[0m09:59:00.728718 [info ] [MainThread]: Running with dbt=1.4.1
+[0m09:59:00.730003 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m09:59:00.730213 [debug] [MainThread]: Tracking: tracking
+[0m09:59:00.737481 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3f5c24d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3f5c24df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3f5bd1160>]}
+[0m09:59:00.766311 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m09:59:00.766750 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://macros/gen_dl_model.sql
+[0m09:59:00.785633 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f59c0ad8-ce76-4596-be60-56088911082e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3f58ab520>]}
+[0m09:59:00.790160 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f59c0ad8-ce76-4596-be60-56088911082e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3f587ceb0>]}
+[0m09:59:00.791398 [debug] [MainThread]: Acquiring new bigquery connection 'macro_gen_dl_model'
+[0m09:59:00.802787 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3f5c24d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3f5843fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3f5843c10>]}
+[0m09:59:00.803126 [debug] [MainThread]: Flushing usage events
+[0m09:59:01.504048 [debug] [MainThread]: Connection 'macro_gen_dl_model' was properly closed.
+
+
+============================== 2023-03-15 10:10:51.628603 | f41ab8de-bee9-4851-bc63-03f7ee294343 ==============================
+[0m10:10:51.628603 [info ] [MainThread]: Running with dbt=1.4.1
+[0m10:10:51.629887 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m10:10:51.630088 [debug] [MainThread]: Tracking: tracking
+[0m10:10:51.637314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1f05a4c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1f05a4fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1f05a4ca0>]}
+[0m10:10:51.666226 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:10:51.666661 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://macros/gen_dl_model.sql
+[0m10:10:51.685799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f41ab8de-bee9-4851-bc63-03f7ee294343', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1f02963d0>]}
+[0m10:10:51.690340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f41ab8de-bee9-4851-bc63-03f7ee294343', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1f0269d60>]}
+[0m10:10:51.691578 [debug] [MainThread]: Acquiring new bigquery connection 'macro_gen_dl_model'
+[0m10:10:51.703824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1f05a4c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1f022b8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1f022bac0>]}
+[0m10:10:51.704224 [debug] [MainThread]: Flushing usage events
+[0m10:10:52.504852 [debug] [MainThread]: Connection 'macro_gen_dl_model' was properly closed.
+
+
+============================== 2023-03-15 10:12:23.897295 | 161bf62c-497c-491a-ba11-1fd9b2644bdb ==============================
+[0m10:12:23.897295 [info ] [MainThread]: Running with dbt=1.4.1
+[0m10:12:23.898217 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'deps', 'rpc_method': 'deps', 'indirect_selection': 'eager'}
+[0m10:12:23.898447 [debug] [MainThread]: Tracking: tracking
+[0m10:12:23.906322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5a3ba23610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5a3ba23a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5a3ba236a0>]}
+[0m10:12:23.907722 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-shdqdwy3'
+[0m10:12:23.908371 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m10:12:24.259841 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m10:12:24.261884 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json
+[0m10:12:24.449212 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_external_tables.json 200
+[0m10:12:24.498381 [info ] [MainThread]: Installing dbt-labs/dbt_external_tables
+[0m10:12:25.116749 [info ] [MainThread]:   Installed from version 0.8.2
+[0m10:12:25.117426 [info ] [MainThread]:   Up to date!
+[0m10:12:25.118141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '161bf62c-497c-491a-ba11-1fd9b2644bdb', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5a3ba23c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5a3ba232b0>]}
+[0m10:12:25.119095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5a3ba00eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5a3b9fc970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5a3b9fca30>]}
+[0m10:12:25.119672 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-03-15 10:28:36.033466 | bf02c3d4-00b3-4cd8-9a48-78da0b734acb ==============================
+[0m10:28:36.033466 [info ] [MainThread]: Running with dbt=1.4.1
+[0m10:28:36.034896 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'stage_external_sources', 'args': '{}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m10:28:36.035180 [debug] [MainThread]: Tracking: tracking
+[0m10:28:36.045475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa201e63fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa201e653d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa201e65100>]}
+[0m10:28:36.076159 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m10:28:36.076828 [info ] [MainThread]: Unable to do partial parsing because a project dependency has been added
+[0m10:28:36.077455 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m10:28:36.078021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'bf02c3d4-00b3-4cd8-9a48-78da0b734acb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa201e85d90>]}
+[0m10:28:36.830871 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/target_crm__feed1.sql
+[0m10:28:36.840622 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/base/base_crm__feed1.sql
+[0m10:28:36.854940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa2020a9550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa201b5b0a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa201be35e0>]}
+[0m10:28:36.855377 [debug] [MainThread]: Flushing usage events
+[0m10:28:37.562609 [error] [MainThread]: Encountered an error:
+Compilation Error in snapshot crm__feed1_snapshot (snapshots/crm/crm__feed1_snapshot.sql)
+  expected token ':', got '}'
+    line 6
+      target_schema={{ target.schema }},
+
+
+============================== 2023-03-15 10:29:14.083471 | 2f89c0c8-34e3-44af-a390-9b8203d82de4 ==============================
+[0m10:29:14.083471 [info ] [MainThread]: Running with dbt=1.4.1
+[0m10:29:14.084889 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'stage_external_sources', 'args': '{}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m10:29:14.085250 [debug] [MainThread]: Tracking: tracking
+[0m10:29:14.095831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbebac7dcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbebac7df40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbebac7dfa0>]}
+[0m10:29:14.129536 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m10:29:14.130111 [info ] [MainThread]: Unable to do partial parsing because a project dependency has been added
+[0m10:29:14.130718 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m10:29:14.131395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2f89c0c8-34e3-44af-a390-9b8203d82de4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbebacb2fd0>]}
+[0m10:29:14.888750 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/target_crm__feed1.sql
+[0m10:29:14.898603 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/base/base_crm__feed1.sql
+[0m10:29:14.967736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2f89c0c8-34e3-44af-a390-9b8203d82de4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbeba128d30>]}
+[0m10:29:14.973022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2f89c0c8-34e3-44af-a390-9b8203d82de4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbebaf2ddc0>]}
+[0m10:29:14.974253 [debug] [MainThread]: Acquiring new bigquery connection 'macro_stage_external_sources'
+[0m10:29:14.988701 [info ] [MainThread]: 1 of 1 START external source crm.feed1
+[0m10:29:14.994320 [debug] [MainThread]: On "macro_stage_external_sources": cache miss for schema "dbt-bank-transactions-dev.crm", this is inefficient
+[0m10:29:14.994651 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:29:15.919747 [info ] [MainThread]: 1 of 1 (1) create or replace external table `dbt-bank-transactions-dev`.`crm`.`feed1`(     ...  
+[0m10:29:15.928129 [debug] [MainThread]: On macro_stage_external_sources: /* {"app": "dbt", "dbt_version": "1.4.1", "profile_name": "dbt_codegen_dl", "target_name": "dev", "connection_name": "macro_stage_external_sources"} */
+
+                 
+    create or replace external table `dbt-bank-transactions-dev`.`crm`.`feed1`(
+            
+                key None,
+                othercolumn None,
+                last_upd None)
+        
+        
+        options (
+            uris = ['gs://dbt-codegen-dl/crm/feed1/*.csv'], format = 'CSV', skip_leading_rows = 1, field_delimiter = ',')
+
+
+            
+[0m10:29:16.227259 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.4.1", "profile_name": "dbt_codegen_dl", "target_name": "dev", "connection_name": "macro_stage_external_sources"} */
+
+                 
+    create or replace external table `dbt-bank-transactions-dev`.`crm`.`feed1`(
+            
+                key None,
+                othercolumn None,
+                last_upd None)
+        
+        
+        options (
+            uris = ['gs://dbt-codegen-dl/crm/feed1/*.csv'], format = 'CSV', skip_leading_rows = 1, field_delimiter = ',')
+
+
+            
+[0m10:29:16.229782 [debug] [MainThread]: BigQuery adapter: 404 Not found: Dataset dbt-bank-transactions-dev:crm was not found in location europe-west6
+
+Location: europe-west6
+Job ID: 0d966b74-8b68-4fbc-9513-9c504d8f6689
+
+[0m10:29:16.231287 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+macro stage_external_sources
+[0m10:29:16.232272 [debug] [MainThread]: BigQuery adapter: Runtime Error
+  404 Not found: Dataset dbt-bank-transactions-dev:crm was not found in location europe-west6
+  
+  Location: europe-west6
+  Job ID: 0d966b74-8b68-4fbc-9513-9c504d8f6689
+  
+[0m10:29:16.234356 [error] [MainThread]: Encountered an error while running operation: Runtime Error
+  404 Not found: Dataset dbt-bank-transactions-dev:crm was not found in location europe-west6
+  
+  Location: europe-west6
+  Job ID: 0d966b74-8b68-4fbc-9513-9c504d8f6689
+  
+[0m10:29:16.254219 [debug] [MainThread]: Traceback (most recent call last):
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 207, in exception_handler
+    yield
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 647, in _retry_and_handle
+    return retry.retry_target(
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/google/api_core/retry.py", line 191, in retry_target
+    return target()
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 430, in fn
+    return self._query_and_results(
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 632, in _query_and_results
+    iterator = query_job.result(timeout=job_execution_timeout)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/google/cloud/bigquery/job/query.py", line 1499, in result
+    do_get_result()
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/google/api_core/retry.py", line 349, in retry_wrapped_func
+    return retry_target(
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/google/api_core/retry.py", line 191, in retry_target
+    return target()
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/google/cloud/bigquery/job/query.py", line 1489, in do_get_result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/google/cloud/bigquery/job/base.py", line 728, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/google/api_core/future/polling.py", line 261, in result
+    raise self._exception
+google.api_core.exceptions.NotFound: 404 Not found: Dataset dbt-bank-transactions-dev:crm was not found in location europe-west6
+
+Location: europe-west6
+Job ID: 0d966b74-8b68-4fbc-9513-9c504d8f6689
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/task/run_operation.py", line 57, in run
+    self._run_unsafe()
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/task/run_operation.py", line 47, in _run_unsafe
+    res = adapter.execute_macro(
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 999, in execute_macro
+    result = macro_function(**kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/clients/jinja.py", line 329, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/clients/jinja.py", line 256, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 220, in macro
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/clients/jinja.py", line 329, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/clients/jinja.py", line 256, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 270, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 447, in execute
+    query_job, iterator = self.raw_execute(sql, fetch=fetch)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 438, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 647, in _retry_and_handle
+    return retry.retry_target(
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 241, in exception_handler
+    raise DbtRuntimeError(exc_message)
+dbt.exceptions.DbtRuntimeError: Runtime Error
+  404 Not found: Dataset dbt-bank-transactions-dev:crm was not found in location europe-west6
+  
+  Location: europe-west6
+  Job ID: 0d966b74-8b68-4fbc-9513-9c504d8f6689
+  
+
+[0m10:29:16.256232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbeba0d8d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbeba0d82e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbeba0d8e20>]}
+[0m10:29:16.258081 [debug] [MainThread]: Flushing usage events
+[0m10:29:16.858107 [debug] [MainThread]: Connection 'macro_stage_external_sources' was properly closed.
+
+
+============================== 2023-03-15 10:31:06.049086 | 93eaff2f-3c8b-4a10-8ed4-207eb461d947 ==============================
+[0m10:31:06.049086 [info ] [MainThread]: Running with dbt=1.4.1
+[0m10:31:06.050409 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'stage_external_sources', 'args': '{}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m10:31:06.050749 [debug] [MainThread]: Tracking: tracking
+[0m10:31:06.058501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96e1a1be20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96e1a1be80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96e1a2e1f0>]}
+[0m10:31:06.115233 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:31:06.115511 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:31:06.120735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '93eaff2f-3c8b-4a10-8ed4-207eb461d947', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96e16c2ee0>]}
+[0m10:31:06.126817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '93eaff2f-3c8b-4a10-8ed4-207eb461d947', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96e1a1be80>]}
+[0m10:31:06.128046 [debug] [MainThread]: Acquiring new bigquery connection 'macro_stage_external_sources'
+[0m10:31:06.142933 [info ] [MainThread]: 1 of 1 START external source crm.feed1
+[0m10:31:06.149269 [debug] [MainThread]: On "macro_stage_external_sources": cache miss for schema "dbt-bank-transactions-dev.crm", this is inefficient
+[0m10:31:06.149804 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:31:06.726851 [info ] [MainThread]: 1 of 1 (1) create or replace external table `dbt-bank-transactions-dev`.`crm`.`feed1`(     ...  
+[0m10:31:06.741293 [debug] [MainThread]: On macro_stage_external_sources: /* {"app": "dbt", "dbt_version": "1.4.1", "profile_name": "dbt_codegen_dl", "target_name": "dev", "connection_name": "macro_stage_external_sources"} */
+
+                 
+    create or replace external table `dbt-bank-transactions-dev`.`crm`.`feed1`(
+            
+                key None,
+                othercolumn None,
+                last_upd None)
+        
+        
+        options (
+            uris = ['gs://dbt-codegen-dl/crm/feed1/*.csv'], format = 'CSV', skip_leading_rows = 1, field_delimiter = ',')
+
+
+            
+[0m10:31:07.570787 [debug] [MainThread]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Type not found: None at [6:21]')
+[0m10:31:08.460695 [error] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-bank-transactions-dev&j=bq:europe-west6:3154a657-8683-4153-b8b9-530d906e06d5&page=queryresults
+[0m10:31:08.464589 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+macro stage_external_sources
+[0m10:31:08.467885 [debug] [MainThread]: BigQuery adapter: Database Error
+  Type not found: None at [6:21]
+[0m10:31:08.472041 [error] [MainThread]: Encountered an error while running operation: Database Error
+  Type not found: None at [6:21]
+[0m10:31:08.484878 [debug] [MainThread]: Traceback (most recent call last):
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 207, in exception_handler
+    yield
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 647, in _retry_and_handle
+    return retry.retry_target(
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/google/api_core/retry.py", line 191, in retry_target
+    return target()
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 430, in fn
+    return self._query_and_results(
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 632, in _query_and_results
+    iterator = query_job.result(timeout=job_execution_timeout)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/google/cloud/bigquery/job/query.py", line 1499, in result
+    do_get_result()
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/google/api_core/retry.py", line 349, in retry_wrapped_func
+    return retry_target(
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/google/api_core/retry.py", line 191, in retry_target
+    return target()
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/google/cloud/bigquery/job/query.py", line 1489, in do_get_result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/google/cloud/bigquery/job/base.py", line 728, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/google/api_core/future/polling.py", line 261, in result
+    raise self._exception
+google.api_core.exceptions.BadRequest: 400 Type not found: None at [6:21]
+
+Location: europe-west6
+Job ID: 3154a657-8683-4153-b8b9-530d906e06d5
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/task/run_operation.py", line 57, in run
+    self._run_unsafe()
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/task/run_operation.py", line 47, in _run_unsafe
+    res = adapter.execute_macro(
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 999, in execute_macro
+    result = macro_function(**kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/clients/jinja.py", line 329, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/clients/jinja.py", line 256, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 220, in macro
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/clients/jinja.py", line 329, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/clients/jinja.py", line 256, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/jinja2/runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 270, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 447, in execute
+    query_job, iterator = self.raw_execute(sql, fetch=fetch)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 438, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 647, in _retry_and_handle
+    return retry.retry_target(
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 211, in exception_handler
+    self.handle_error(e, message)
+  File "/home/mattiapriv/Projects/dbt-codegen-dl/.venv/lib/python3.8/site-packages/dbt/adapters/bigquery/connections.py", line 199, in handle_error
+    raise DbtDatabaseError(error_msg)
+dbt.exceptions.DbtDatabaseError: Database Error
+  Type not found: None at [6:21]
+
+[0m10:31:08.486301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96e165d160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96e165d9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96e1666a00>]}
+[0m10:31:08.487643 [debug] [MainThread]: Flushing usage events
+[0m10:31:09.272413 [debug] [MainThread]: Connection 'macro_stage_external_sources' was properly closed.
+
+
+============================== 2023-03-15 10:33:23.287079 | d0ed472b-ab96-49e6-8648-0c7b7ddcdb4f ==============================
+[0m10:33:23.287079 [info ] [MainThread]: Running with dbt=1.4.1
+[0m10:33:23.288360 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'stage_external_sources', 'args': '{}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m10:33:23.288616 [debug] [MainThread]: Tracking: tracking
+[0m10:33:23.299091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08dd06dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08dd06e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08dd19190>]}
+[0m10:33:23.350840 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:33:23.351390 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://models/staging/crm/crm__sources.yml
+[0m10:33:23.364017 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/base/base_crm__feed1.sql
+[0m10:33:23.398145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd0ed472b-ab96-49e6-8648-0c7b7ddcdb4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08d12b730>]}
+[0m10:33:23.403885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd0ed472b-ab96-49e6-8648-0c7b7ddcdb4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08dd06e20>]}
+[0m10:33:23.405268 [debug] [MainThread]: Acquiring new bigquery connection 'macro_stage_external_sources'
+[0m10:33:23.470923 [info ] [MainThread]: 1 of 1 START external source crm.feed1
+[0m10:33:23.479382 [debug] [MainThread]: On "macro_stage_external_sources": cache miss for schema "dbt-bank-transactions-dev.crm", this is inefficient
+[0m10:33:23.479865 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:33:24.043136 [info ] [MainThread]: 1 of 1 (1) create or replace external table `dbt-bank-transactions-dev`.`crm`.`feed1`(     ...  
+[0m10:33:24.054393 [debug] [MainThread]: On macro_stage_external_sources: /* {"app": "dbt", "dbt_version": "1.4.1", "profile_name": "dbt_codegen_dl", "target_name": "dev", "connection_name": "macro_stage_external_sources"} */
+
+                 
+    create or replace external table `dbt-bank-transactions-dev`.`crm`.`feed1`(
+            
+                key string,
+                othercolumn string,
+                last_upd string)
+        
+        
+        options (
+            uris = ['gs://dbt-codegen-dl/crm/feed1/*.csv'], format = 'CSV', skip_leading_rows = 1, field_delimiter = ',')
+
+
+            
+[0m10:33:25.281805 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-bank-transactions-dev&j=bq:europe-west6:4468a6e9-2be2-4856-aa43-78cf67fdb589&page=queryresults
+[0m10:33:25.283417 [info ] [MainThread]: 1 of 1 (1) None (0 processed)
+[0m10:33:25.287338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08dd06dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08d9abb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe08d9ab5e0>]}
+[0m10:33:25.288779 [debug] [MainThread]: Flushing usage events
+[0m10:33:25.981784 [debug] [MainThread]: Connection 'macro_stage_external_sources' was properly closed.
+
+
+============================== 2023-03-15 10:35:05.023965 | 6b82f83a-8230-4fe9-abeb-969cb1314049 ==============================
+[0m10:35:05.023965 [info ] [MainThread]: Running with dbt=1.4.1
+[0m10:35:05.025382 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'snapshot', 'rpc_method': 'snapshot', 'indirect_selection': 'eager'}
+[0m10:35:05.025742 [debug] [MainThread]: Tracking: tracking
+[0m10:35:05.036096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d8536c310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d8536c730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d8536c370>]}
+[0m10:35:05.090539 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:35:05.091006 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://macros/gen_dl_model.sql
+[0m10:35:05.111382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6b82f83a-8230-4fe9-abeb-969cb1314049', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d84fbd1c0>]}
+[0m10:35:05.117500 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6b82f83a-8230-4fe9-abeb-969cb1314049', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d84fef970>]}
+[0m10:35:05.117883 [info ] [MainThread]: Found 2 models, 0 tests, 1 snapshot, 0 analyses, 378 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m10:35:05.118195 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6b82f83a-8230-4fe9-abeb-969cb1314049', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d84fef8b0>]}
+[0m10:35:05.119440 [info ] [MainThread]: 
+[0m10:35:05.120887 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:35:05.122141 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dbt-bank-transactions-dev'
+[0m10:35:05.122586 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:35:05.981106 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dbt-bank-transactions-dev_dbt_codegen_dl'
+[0m10:35:05.982859 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:35:06.627554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6b82f83a-8230-4fe9-abeb-969cb1314049', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d84fef130>]}
+[0m10:35:06.630729 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:35:06.632731 [info ] [MainThread]: 
+[0m10:35:06.650261 [debug] [Thread-1  ]: Began running node snapshot.dbt_codegen_dl.crm__feed1_snapshot
+[0m10:35:06.652935 [info ] [Thread-1  ]: 1 of 1 START snapshot dbt_codegen_dl.crm__feed1_snapshot ....................... [RUN]
+[0m10:35:06.657936 [debug] [Thread-1  ]: Acquiring new bigquery connection 'snapshot.dbt_codegen_dl.crm__feed1_snapshot'
+[0m10:35:06.659466 [debug] [Thread-1  ]: Began compiling node snapshot.dbt_codegen_dl.crm__feed1_snapshot
+[0m10:35:06.671542 [debug] [Thread-1  ]: Timing info for snapshot.dbt_codegen_dl.crm__feed1_snapshot (compile): 2023-03-15 10:35:06.660426 => 2023-03-15 10:35:06.671286
+[0m10:35:06.672603 [debug] [Thread-1  ]: Began executing node snapshot.dbt_codegen_dl.crm__feed1_snapshot
+[0m10:35:06.749607 [debug] [Thread-1  ]: Writing runtime sql for node "snapshot.dbt_codegen_dl.crm__feed1_snapshot"
+[0m10:35:06.750087 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m10:35:06.751297 [debug] [Thread-1  ]: On snapshot.dbt_codegen_dl.crm__feed1_snapshot: /* {"app": "dbt", "dbt_version": "1.4.1", "profile_name": "dbt_codegen_dl", "target_name": "dev", "node_id": "snapshot.dbt_codegen_dl.crm__feed1_snapshot"} */
+
+      
+  
+    
+
+    create or replace table `dbt-bank-transactions-dev`.`dbt_codegen_dl`.`crm__feed1_snapshot`
+    
+    
+    OPTIONS()
+    as (
+      
+
+    select *,
+        to_hex(md5(concat(coalesce(cast(key as string), ''), '|',coalesce(cast(last_upd as string), '')))) as dbt_scd_id,
+        last_upd as dbt_updated_at,
+        last_upd as dbt_valid_from,
+        nullif(last_upd, last_upd) as dbt_valid_to
+    from (
+        
+
+
+    ) sbq
+
+
+
+    );
+  
+  
+[0m10:35:07.255760 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Unexpected ")" at [23:5]')
+[0m10:35:08.226732 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-bank-transactions-dev&j=bq:europe-west6:5fba10bd-c505-43fa-a868-d44e8a93c2f3&page=queryresults
+[0m10:35:08.230192 [debug] [Thread-1  ]: Timing info for snapshot.dbt_codegen_dl.crm__feed1_snapshot (execute): 2023-03-15 10:35:06.673260 => 2023-03-15 10:35:08.229805
+[0m10:35:08.238903 [debug] [Thread-1  ]: Database Error in snapshot crm__feed1_snapshot (snapshots/crm/crm__feed1_snapshot.sql)
+  Syntax error: Unexpected ")" at [23:5]
+  compiled Code at target/run/dbt_codegen_dl/snapshots/crm/crm__feed1_snapshot.sql
+[0m10:35:08.239441 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6b82f83a-8230-4fe9-abeb-969cb1314049', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d8411c1c0>]}
+[0m10:35:08.240139 [error] [Thread-1  ]: 1 of 1 ERROR snapshotting dbt_codegen_dl.crm__feed1_snapshot ................... [[31mERROR[0m in 1.58s]
+[0m10:35:08.241692 [debug] [Thread-1  ]: Finished running node snapshot.dbt_codegen_dl.crm__feed1_snapshot
+[0m10:35:08.323249 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:35:08.324112 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:35:08.324484 [debug] [MainThread]: Connection 'snapshot.dbt_codegen_dl.crm__feed1_snapshot' was properly closed.
+[0m10:35:08.324848 [info ] [MainThread]: 
+[0m10:35:08.325658 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 3.20 seconds (3.20s).
+[0m10:35:08.326617 [debug] [MainThread]: Command end result
+[0m10:35:08.336111 [info ] [MainThread]: 
+[0m10:35:08.337074 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m10:35:08.337968 [info ] [MainThread]: 
+[0m10:35:08.338885 [error] [MainThread]: [33mDatabase Error in snapshot crm__feed1_snapshot (snapshots/crm/crm__feed1_snapshot.sql)[0m
+[0m10:35:08.339819 [error] [MainThread]:   Syntax error: Unexpected ")" at [23:5]
+[0m10:35:08.340603 [error] [MainThread]:   compiled Code at target/run/dbt_codegen_dl/snapshots/crm/crm__feed1_snapshot.sql
+[0m10:35:08.341871 [info ] [MainThread]: 
+[0m10:35:08.342802 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m10:35:08.343878 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d855aa910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d85596d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d853f2160>]}
+[0m10:35:08.344415 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-03-15 10:40:44.915164 | 8a149ff0-b92f-4774-b79d-a7659cfe4ff3 ==============================
+[0m10:40:44.915164 [info ] [MainThread]: Running with dbt=1.4.1
+[0m10:40:44.916607 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['base_crm_feed1'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m10:40:44.917004 [debug] [MainThread]: Tracking: tracking
+[0m10:40:44.925253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7cf3996f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7cf3999310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7cf39992e0>]}
+[0m10:40:44.980760 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:40:44.981031 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:40:44.986352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8a149ff0-b92f-4774-b79d-a7659cfe4ff3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7cf362e0d0>]}
+[0m10:40:44.992902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8a149ff0-b92f-4774-b79d-a7659cfe4ff3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7cf36d9760>]}
+[0m10:40:44.993272 [info ] [MainThread]: Found 2 models, 0 tests, 1 snapshot, 0 analyses, 378 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m10:40:44.993641 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8a149ff0-b92f-4774-b79d-a7659cfe4ff3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7cf36d98e0>]}
+[0m10:40:44.994475 [warn ] [MainThread]: The selection criterion 'base_crm_feed1' does not match any nodes
+[0m10:40:44.995491 [info ] [MainThread]: 
+[0m10:40:44.996056 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m10:40:44.996532 [debug] [MainThread]: Command end result
+[0m10:40:45.006575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7cf362cfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7cf36d9370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7cf36d99d0>]}
+[0m10:40:45.006902 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-03-15 10:40:59.848490 | d01537ca-0c5c-49f7-8a59-4bb8242fb4cf ==============================
+[0m10:40:59.848490 [info ] [MainThread]: Running with dbt=1.4.1
+[0m10:40:59.849928 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['base_crm__feed1'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m10:40:59.850288 [debug] [MainThread]: Tracking: tracking
+[0m10:40:59.860719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc40045edf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc40045ee50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4004711c0>]}
+[0m10:40:59.916837 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:40:59.917112 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:40:59.922320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd01537ca-0c5c-49f7-8a59-4bb8242fb4cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc400102f10>]}
+[0m10:40:59.929126 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd01537ca-0c5c-49f7-8a59-4bb8242fb4cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4001ad820>]}
+[0m10:40:59.929487 [info ] [MainThread]: Found 2 models, 0 tests, 1 snapshot, 0 analyses, 378 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m10:40:59.929837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd01537ca-0c5c-49f7-8a59-4bb8242fb4cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4001ad670>]}
+[0m10:40:59.930968 [info ] [MainThread]: 
+[0m10:40:59.932442 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:40:59.933475 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dbt-bank-transactions-dev'
+[0m10:40:59.933780 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:41:00.764115 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dbt-bank-transactions-dev_dbt_codegen_dl'
+[0m10:41:00.765491 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:41:01.345544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd01537ca-0c5c-49f7-8a59-4bb8242fb4cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc400102f10>]}
+[0m10:41:01.346305 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:41:01.346712 [info ] [MainThread]: 
+[0m10:41:01.353602 [debug] [Thread-1  ]: Began running node model.dbt_codegen_dl.base_crm__feed1
+[0m10:41:01.354730 [info ] [Thread-1  ]: 1 of 1 START sql view model dbt_codegen_dl.base_crm__feed1 ..................... [RUN]
+[0m10:41:01.355877 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_codegen_dl.base_crm__feed1'
+[0m10:41:01.356367 [debug] [Thread-1  ]: Began compiling node model.dbt_codegen_dl.base_crm__feed1
+[0m10:41:01.363703 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_codegen_dl.base_crm__feed1"
+[0m10:41:01.365059 [debug] [Thread-1  ]: Timing info for model.dbt_codegen_dl.base_crm__feed1 (compile): 2023-03-15 10:41:01.356703 => 2023-03-15 10:41:01.364862
+[0m10:41:01.366859 [debug] [Thread-1  ]: Began executing node model.dbt_codegen_dl.base_crm__feed1
+[0m10:41:01.413704 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbt_codegen_dl.base_crm__feed1"
+[0m10:41:01.414346 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m10:41:01.415709 [debug] [Thread-1  ]: On model.dbt_codegen_dl.base_crm__feed1: /* {"app": "dbt", "dbt_version": "1.4.1", "profile_name": "dbt_codegen_dl", "target_name": "dev", "node_id": "model.dbt_codegen_dl.base_crm__feed1"} */
+
+
+  create or replace view `dbt-bank-transactions-dev`.`dbt_codegen_dl`.`base_crm__feed1`
+  OPTIONS()
+  as 
+
+
+select 
+    key as key,
+    cast(REPLACE(othercolumn, ',', '.') as number) as othercolumn,
+    cast(last_upd as datetime) as last_upd
+    
+from `dbt-bank-transactions-dev`.`crm`.`feed1`;
+
+
+[0m10:41:03.191603 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Type not found: number at [11:44]')
+[0m10:41:03.835894 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-bank-transactions-dev&j=bq:europe-west6:fd488228-9895-4088-91bf-abfe00e1031a&page=queryresults
+[0m10:41:03.839359 [debug] [Thread-1  ]: Timing info for model.dbt_codegen_dl.base_crm__feed1 (execute): 2023-03-15 10:41:01.367896 => 2023-03-15 10:41:03.839003
+[0m10:41:03.847693 [debug] [Thread-1  ]: Database Error in model base_crm__feed1 (models/staging/crm/base/base_crm__feed1.sql)
+  Type not found: number at [11:44]
+  compiled Code at target/run/dbt_codegen_dl/models/staging/crm/base/base_crm__feed1.sql
+[0m10:41:03.848218 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd01537ca-0c5c-49f7-8a59-4bb8242fb4cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc3ff0545b0>]}
+[0m10:41:03.848780 [error] [Thread-1  ]: 1 of 1 ERROR creating sql view model dbt_codegen_dl.base_crm__feed1 ............ [[31mERROR[0m in 2.49s]
+[0m10:41:03.850359 [debug] [Thread-1  ]: Finished running node model.dbt_codegen_dl.base_crm__feed1
+[0m10:41:03.851983 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:41:03.852725 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:41:03.853267 [debug] [MainThread]: Connection 'model.dbt_codegen_dl.base_crm__feed1' was properly closed.
+[0m10:41:03.853883 [info ] [MainThread]: 
+[0m10:41:03.854703 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.92 seconds (3.92s).
+[0m10:41:03.855944 [debug] [MainThread]: Command end result
+[0m10:41:03.865412 [info ] [MainThread]: 
+[0m10:41:03.866369 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m10:41:03.867081 [info ] [MainThread]: 
+[0m10:41:03.867801 [error] [MainThread]: [33mDatabase Error in model base_crm__feed1 (models/staging/crm/base/base_crm__feed1.sql)[0m
+[0m10:41:03.868399 [error] [MainThread]:   Type not found: number at [11:44]
+[0m10:41:03.869284 [error] [MainThread]:   compiled Code at target/run/dbt_codegen_dl/models/staging/crm/base/base_crm__feed1.sql
+[0m10:41:03.870085 [info ] [MainThread]: 
+[0m10:41:04.057610 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m10:41:04.060567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc40048c820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc400102fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4001ad6a0>]}
+[0m10:41:04.062752 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-03-15 10:42:48.909202 | 54d593d4-a3ba-4075-8c50-500fc328fd67 ==============================
+[0m10:42:48.909202 [info ] [MainThread]: Running with dbt=1.4.1
+[0m10:42:48.911087 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'macro': 'gen_dl_model', 'args': '{"source_name": "crm", "source_relation": "feed1"}', 'which': 'run-operation', 'rpc_method': 'run-operation', 'indirect_selection': 'eager'}
+[0m10:42:48.911397 [debug] [MainThread]: Tracking: tracking
+[0m10:42:48.919620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd811643250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8116435b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd811643280>]}
+[0m10:42:48.977258 [debug] [MainThread]: Partial parsing enabled: 3 files deleted, 0 files added, 1 files changed.
+[0m10:42:48.978055 [debug] [MainThread]: Partial parsing: updated file: dbt_codegen_dl://models/staging/crm/crm__sources.yml
+[0m10:42:48.978390 [debug] [MainThread]: Partial parsing: deleted file: dbt_codegen_dl://models/staging/crm/target_crm__feed1.sql
+[0m10:42:48.978757 [debug] [MainThread]: Partial parsing: deleted file: dbt_codegen_dl://models/staging/crm/base/base_crm__feed1.sql
+[0m10:42:48.979110 [debug] [MainThread]: Partial parsing: deleted file: dbt_codegen_dl://snapshots/crm/crm__feed1_snapshot.sql
+[0m10:42:49.014397 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '54d593d4-a3ba-4075-8c50-500fc328fd67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8112d3fa0>]}
+[0m10:42:49.020451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '54d593d4-a3ba-4075-8c50-500fc328fd67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd811690460>]}
+[0m10:42:49.023160 [debug] [MainThread]: Acquiring new bigquery connection 'macro_gen_dl_model'
+[0m10:42:49.039618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd811643250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81139db50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81139da30>]}
+[0m10:42:49.040031 [debug] [MainThread]: Flushing usage events
+[0m10:42:49.847906 [debug] [MainThread]: Connection 'macro_gen_dl_model' was properly closed.
+
+
+============================== 2023-03-15 10:43:14.471172 | 402c1b8d-545b-4cb8-83d6-e8f1b8b76c11 ==============================
+[0m10:43:14.471172 [info ] [MainThread]: Running with dbt=1.4.1
+[0m10:43:14.472495 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['base_crm__feed1'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m10:43:14.472840 [debug] [MainThread]: Tracking: tracking
+[0m10:43:14.482852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe503f69a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe503f6d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe503f6a00>]}
+[0m10:43:14.537175 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 3 files added, 0 files changed.
+[0m10:43:14.537604 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://snapshots/crm/crm__feed1_snapshot.sql
+[0m10:43:14.537867 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/base/base_crm__feed1.sql
+[0m10:43:14.538101 [debug] [MainThread]: Partial parsing: added file: dbt_codegen_dl://models/staging/crm/target_crm__feed1.sql
+[0m10:43:14.551152 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/base/base_crm__feed1.sql
+[0m10:43:14.561551 [debug] [MainThread]: 1699: static parser successfully parsed staging/crm/target_crm__feed1.sql
+[0m10:43:14.599115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '402c1b8d-545b-4cb8-83d6-e8f1b8b76c11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe4f7da580>]}
+[0m10:43:14.651785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '402c1b8d-545b-4cb8-83d6-e8f1b8b76c11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe5052b940>]}
+[0m10:43:14.652234 [info ] [MainThread]: Found 2 models, 0 tests, 1 snapshot, 0 analyses, 378 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m10:43:14.652640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '402c1b8d-545b-4cb8-83d6-e8f1b8b76c11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe50845520>]}
+[0m10:43:14.654001 [info ] [MainThread]: 
+[0m10:43:14.656238 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:43:14.657767 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dbt-bank-transactions-dev'
+[0m10:43:14.658348 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:43:15.400808 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dbt-bank-transactions-dev_dbt_codegen_dl'
+[0m10:43:15.402394 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:43:15.960928 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '402c1b8d-545b-4cb8-83d6-e8f1b8b76c11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe508c3b80>]}
+[0m10:43:15.962096 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:43:15.962693 [info ] [MainThread]: 
+[0m10:43:15.976766 [debug] [Thread-1  ]: Began running node model.dbt_codegen_dl.base_crm__feed1
+[0m10:43:15.977381 [info ] [Thread-1  ]: 1 of 1 START sql view model dbt_codegen_dl.base_crm__feed1 ..................... [RUN]
+[0m10:43:15.978556 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.dbt_codegen_dl.base_crm__feed1'
+[0m10:43:15.978974 [debug] [Thread-1  ]: Began compiling node model.dbt_codegen_dl.base_crm__feed1
+[0m10:43:15.983568 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_codegen_dl.base_crm__feed1"
+[0m10:43:15.984360 [debug] [Thread-1  ]: Timing info for model.dbt_codegen_dl.base_crm__feed1 (compile): 2023-03-15 10:43:15.979262 => 2023-03-15 10:43:15.984242
+[0m10:43:15.984923 [debug] [Thread-1  ]: Began executing node model.dbt_codegen_dl.base_crm__feed1
+[0m10:43:16.044697 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbt_codegen_dl.base_crm__feed1"
+[0m10:43:16.045570 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m10:43:16.048241 [debug] [Thread-1  ]: On model.dbt_codegen_dl.base_crm__feed1: /* {"app": "dbt", "dbt_version": "1.4.1", "profile_name": "dbt_codegen_dl", "target_name": "dev", "node_id": "model.dbt_codegen_dl.base_crm__feed1"} */
+
+
+  create or replace view `dbt-bank-transactions-dev`.`dbt_codegen_dl`.`base_crm__feed1`
+  OPTIONS()
+  as 
+
+
+select 
+    key as key,
+    cast(REPLACE(othercolumn, ',', '.') as numeric) as othercolumn,
+    cast(last_upd as datetime) as last_upd
+    
+from `dbt-bank-transactions-dev`.`crm`.`feed1`;
+
+
+[0m10:43:17.577492 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-bank-transactions-dev&j=bq:europe-west6:81e70b3b-3a86-4bbb-97ad-f840250ca032&page=queryresults
+[0m10:43:17.624264 [debug] [Thread-1  ]: Timing info for model.dbt_codegen_dl.base_crm__feed1 (execute): 2023-03-15 10:43:15.985296 => 2023-03-15 10:43:17.624187
+[0m10:43:17.625126 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '402c1b8d-545b-4cb8-83d6-e8f1b8b76c11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe5009c7c0>]}
+[0m10:43:17.625671 [info ] [Thread-1  ]: 1 of 1 OK created sql view model dbt_codegen_dl.base_crm__feed1 ................ [[32mCREATE VIEW (0 processed)[0m in 1.65s]
+[0m10:43:17.627253 [debug] [Thread-1  ]: Finished running node model.dbt_codegen_dl.base_crm__feed1
+[0m10:43:17.628908 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:43:17.629630 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:43:17.629875 [debug] [MainThread]: Connection 'model.dbt_codegen_dl.base_crm__feed1' was properly closed.
+[0m10:43:17.630133 [info ] [MainThread]: 
+[0m10:43:17.630507 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.98 seconds (2.98s).
+[0m10:43:17.631160 [debug] [MainThread]: Command end result
+[0m10:43:17.649438 [info ] [MainThread]: 
+[0m10:43:17.649989 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:43:17.650490 [info ] [MainThread]: 
+[0m10:43:17.650931 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m10:43:17.651551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe50840a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe50418c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe508c3d00>]}
+[0m10:43:17.652064 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-03-15 10:45:24.999306 | 6251ce7e-7481-45e7-8cfd-0e0e40afa217 ==============================
+[0m10:45:24.999306 [info ] [MainThread]: Running with dbt=1.4.1
+[0m10:45:25.000613 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/mattiapriv/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'snapshot', 'rpc_method': 'snapshot', 'indirect_selection': 'eager'}
+[0m10:45:25.000951 [debug] [MainThread]: Tracking: tracking
+[0m10:45:25.011713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09d93c10a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09d93c1460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09d93c1100>]}
+[0m10:45:25.064163 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:45:25.064429 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:45:25.069660 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6251ce7e-7481-45e7-8cfd-0e0e40afa217', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09d9057250>]}
+[0m10:45:25.075900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6251ce7e-7481-45e7-8cfd-0e0e40afa217', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09d9102a90>]}
+[0m10:45:25.076281 [info ] [MainThread]: Found 2 models, 0 tests, 1 snapshot, 0 analyses, 378 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m10:45:25.076605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6251ce7e-7481-45e7-8cfd-0e0e40afa217', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09d91028e0>]}
+[0m10:45:25.077823 [info ] [MainThread]: 
+[0m10:45:25.079174 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:45:25.080223 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dbt-bank-transactions-dev'
+[0m10:45:25.080709 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:45:25.998172 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dbt-bank-transactions-dev_dbt_codegen_dl'
+[0m10:45:25.999616 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:45:26.562321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6251ce7e-7481-45e7-8cfd-0e0e40afa217', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09d9102940>]}
+[0m10:45:26.564179 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:45:26.564545 [info ] [MainThread]: 
+[0m10:45:26.569234 [debug] [Thread-1  ]: Began running node snapshot.dbt_codegen_dl.crm__feed1_snapshot
+[0m10:45:26.570163 [info ] [Thread-1  ]: 1 of 1 START snapshot dbt_codegen_dl.crm__feed1_snapshot ....................... [RUN]
+[0m10:45:26.571223 [debug] [Thread-1  ]: Acquiring new bigquery connection 'snapshot.dbt_codegen_dl.crm__feed1_snapshot'
+[0m10:45:26.571651 [debug] [Thread-1  ]: Began compiling node snapshot.dbt_codegen_dl.crm__feed1_snapshot
+[0m10:45:26.577864 [debug] [Thread-1  ]: Timing info for snapshot.dbt_codegen_dl.crm__feed1_snapshot (compile): 2023-03-15 10:45:26.571968 => 2023-03-15 10:45:26.577725
+[0m10:45:26.578537 [debug] [Thread-1  ]: Began executing node snapshot.dbt_codegen_dl.crm__feed1_snapshot
+[0m10:45:26.653141 [debug] [Thread-1  ]: Writing runtime sql for node "snapshot.dbt_codegen_dl.crm__feed1_snapshot"
+[0m10:45:26.653619 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m10:45:26.654891 [debug] [Thread-1  ]: On snapshot.dbt_codegen_dl.crm__feed1_snapshot: /* {"app": "dbt", "dbt_version": "1.4.1", "profile_name": "dbt_codegen_dl", "target_name": "dev", "node_id": "snapshot.dbt_codegen_dl.crm__feed1_snapshot"} */
+
+      
+  
+    
+
+    create or replace table `dbt-bank-transactions-dev`.`dbt_codegen_dl`.`crm__feed1_snapshot`
+    
+    
+    OPTIONS()
+    as (
+      
+
+    select *,
+        to_hex(md5(concat(coalesce(cast(key as string), ''), '|',coalesce(cast(last_upd as string), '')))) as dbt_scd_id,
+        last_upd as dbt_updated_at,
+        last_upd as dbt_valid_from,
+        nullif(last_upd, last_upd) as dbt_valid_to
+    from (
+        
+
+
+    ) sbq
+
+
+
+    );
+  
+  
+[0m10:45:27.258035 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Unexpected ")" at [23:5]')
+[0m10:45:28.298382 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-bank-transactions-dev&j=bq:europe-west6:3551952b-24c0-4032-928a-d426b3257c89&page=queryresults
+[0m10:45:28.299401 [debug] [Thread-1  ]: Timing info for snapshot.dbt_codegen_dl.crm__feed1_snapshot (execute): 2023-03-15 10:45:26.578927 => 2023-03-15 10:45:28.299320
+[0m10:45:28.302077 [debug] [Thread-1  ]: Database Error in snapshot crm__feed1_snapshot (snapshots/crm/crm__feed1_snapshot.sql)
+  Syntax error: Unexpected ")" at [23:5]
+  compiled Code at target/run/dbt_codegen_dl/snapshots/crm/crm__feed1_snapshot.sql
+[0m10:45:28.302535 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6251ce7e-7481-45e7-8cfd-0e0e40afa217', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09d815c760>]}
+[0m10:45:28.303008 [error] [Thread-1  ]: 1 of 1 ERROR snapshotting dbt_codegen_dl.crm__feed1_snapshot ................... [[31mERROR[0m in 1.73s]
+[0m10:45:28.304372 [debug] [Thread-1  ]: Finished running node snapshot.dbt_codegen_dl.crm__feed1_snapshot
+[0m10:45:28.305876 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:45:28.306838 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:45:28.307328 [debug] [MainThread]: Connection 'snapshot.dbt_codegen_dl.crm__feed1_snapshot' was properly closed.
+[0m10:45:28.308030 [info ] [MainThread]: 
+[0m10:45:28.308687 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 3.23 seconds (3.23s).
+[0m10:45:28.309762 [debug] [MainThread]: Command end result
+[0m10:45:28.318377 [info ] [MainThread]: 
+[0m10:45:28.318921 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m10:45:28.319326 [info ] [MainThread]: 
+[0m10:45:28.319771 [error] [MainThread]: [33mDatabase Error in snapshot crm__feed1_snapshot (snapshots/crm/crm__feed1_snapshot.sql)[0m
+[0m10:45:28.320409 [error] [MainThread]:   Syntax error: Unexpected ")" at [23:5]
+[0m10:45:28.321090 [error] [MainThread]:   compiled Code at target/run/dbt_codegen_dl/snapshots/crm/crm__feed1_snapshot.sql
+[0m10:45:28.321748 [info ] [MainThread]: 
+[0m10:45:28.322540 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m10:45:28.323451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09d91027c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09d9102730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09d9102400>]}
+[0m10:45:28.324059 [debug] [MainThread]: Flushing usage events

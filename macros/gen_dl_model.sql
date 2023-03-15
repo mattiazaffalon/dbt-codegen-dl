@@ -1,10 +1,14 @@
 {% macro gen_dl_model(source_name, source_relation) %}
 {% set source = (graph.sources.values() | selectattr('source_name', 'equalto', source_name) |selectattr('name', 'equalto', source_relation) | list).pop() %}
 {% set columns = source['columns'].values() %}
-{% set modules_separator = '\n------------------------------\n' %}
+{% set module_tag = '\n#codegenmodule' %}
 {% set base_model_name = 'base_' ~ source_name ~ '__' ~ source_relation %}
 {% set snapshot_name = source_name ~ '__' ~ source_relation ~ '_snapshot' %}
 {% set target_name = 'target_' ~ source_name ~ '__' ~ source_relation %}
+
+{% set module_meta = module_tag ~ ' {"type": "base", "filename": "' ~ base_model_name ~ '.sql"}\n'   %}
+{{ print(module_meta) }}
+
 {% set base_model_sql %}
 
 {{'{{'}} config(materialized='view') {{'}}'}}
@@ -33,15 +37,17 @@ from {{'{{'}}  source('{{ source_name }}', '{{ source_relation }}')  {{'}}'}}
 
 {%- endset %}
 {{ print(base_model_sql) }}
-{{ print(modules_separator) }}
+
+{% set module_meta = module_tag ~ ' {"type": "snapshot", "filename": "' ~ snapshot_name ~ '.sql"}\n'   %}
+{{ print(module_meta) }}
 
 {%- set snapshot_sql -%}
-{{'{%'}} snapshot {{ source_name ~ '__' ~ source_relation ~ '_snapshot'}}_snapshot {{'%}'}}
+{{'{%'}} snapshot {{ snapshot_name}} {{'%}'}}
 
 {{'{{'}}
     config(
       unique_key='{{ source['meta']['key-column'] }}',
-      target_schema='target schema',
+      target_schema=target.schema,
       strategy='timestamp',
       updated_at='{{ source['meta']['timestamp-column'] }}',
     )
@@ -55,7 +61,8 @@ from {{'{{'}} ref('{{ base_model_name }}') {{'}}'}}
 
 {{ print(snapshot_sql) }}
 
-{{ print(modules_separator) }}
+{% set module_meta = module_tag ~ ' {"type": "stg", "filename": "' ~ target_name ~ '.sql"}\n'   %}
+{{ print(module_meta) }}
 
 {%- set mart_sql -%}
 select *
