@@ -1,0 +1,36 @@
+version: 2
+sources:
+  - name: crm
+
+    tables:
+      - name: feed1
+        external:
+            location: "gs://dbt-codegen-dl/crm/feed1/*.csv"
+            options:
+              format: "CSV"
+              skip_leading_rows: 1
+              field_delimiter: ","
+        meta:
+          key-column: key
+          timestamp-column: last_upd
+          load-strategy: scd2
+        columns:
+          - name: key
+            data_type: string
+            tests:
+              - not_null
+              - unique
+          - name: numeric_column
+            data_type: string
+            meta:
+              transform-sql: REPLACE(<columnname>, ',', '.')
+              target-type: numeric
+          - name: ts_column
+            data_type: string
+            meta:
+              transform-macro: read_ts_at_timezone(<columnname>, 'UTC+1')
+              target-type: timestamp
+          - name: last_upd
+            data_type: datetime
+            meta:
+              target-type: datetime
