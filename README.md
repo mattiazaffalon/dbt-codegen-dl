@@ -2,7 +2,7 @@
 ## Prepare your Python environment
 **Prerequisite** Make sure you have python 3.8+ intalled on your system
 
-In a command shell, execute the following command in the root directory of the project:
+In a command shell, execute the following commands in the root directory of the project:
 ```bash
 python3.[x] -m venv .venv
 
