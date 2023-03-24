@@ -24,7 +24,7 @@ dbt run-operation stage_external_sources --vars "ext_full_refresh: true"
 
 ## Launching model generation macro
 ```bash
-bin/gen_dl_model.sh --forceoverwrite models/staging/crm/crm__sources.yml crm feed1
+bin/gen_dl_model.sh --forceoverwrite models/dl/crm/crm__sources.yml crm feed1
 ```
 
 (to run the macro and print the results on stdout)
