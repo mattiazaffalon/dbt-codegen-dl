@@ -1,0 +1,17 @@
+
+version: 2
+
+models:
+  - name: dl_crm__feed1
+    tags: ['crm', 'pii']
+    tests:
+      - scd2_nonoverlappingrecords:
+          key_column_name: key
+    columns: 
+      - name: alias_numeric_column
+        tests:
+          - not_null 
+      - name: last_upd
+        tests:
+          - not_null
+

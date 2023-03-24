@@ -28,7 +28,7 @@ on sources
 dbt test --select source:crm.feed1 && \
     dbt snapshot --select source:crm.feed1+  && \
     dbt run --select source:crm.feed1+ --full-refresh && \
-    dbt test --select target_crm__feed1
+    dbt test --select dl_crm__feed1
 ```
 
 ## Development
