@@ -11,13 +11,13 @@ sources:
               skip_leading_rows: 1
               field_delimiter: ","
         meta:
+          target:
+            name: dl_crm__feed1
+            load-strategy: scd2
+            include-default-tests: yes
+            tags: ['crm', 'pii']
           key-column: key
           timestamp-column: last_upd
-          target:
-            name: target_crm__feed1
-            load-strategy: scd2
-            include-default-tests: Yes
-            tags: ['crm', 'pii']
         columns:
           - name: key
             data_type: string
@@ -28,7 +28,7 @@ sources:
             data_type: string
             meta:
               value-extract-sql: REPLACE(<columnname>, ',', '.')
-              target:
+              target: 
                 data-type: numeric
                 name: alias_numeric_column
                 tests:
@@ -37,10 +37,12 @@ sources:
             data_type: string
             meta:
               value-extract-macro: read_ts_at_timezone(<columnname>, 'UTC+1')
-              target:
+              target: 
                 data-type: timestamp
           - name: last_upd
             data_type: datetime
             meta:
-              target:
+              target: 
                 data-type: datetime
+                tests:
+                  - not_null
