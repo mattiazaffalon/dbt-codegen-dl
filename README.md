@@ -1,10 +1,10 @@
 # dbt-codegen-dl
 ## Prepare your Python environment
-**Prerequisite** Make sure you have python3.8 intalled on your system
+**Prerequisite** Make sure you have python 3.8+ intalled on your system
 
 In a command shell, execute the following command in the root directory of the project:
 ```bash
-python3.8 -m venv .venv
+python3.[x] -m venv .venv
 
 source .venv/bin/activate
 
