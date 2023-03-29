@@ -12,6 +12,26 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+## Setup dbt environment
+In order to use dbt cli, you need to setup a profiles.yml file to tell dbt how to connect to the database target of the transformations. Follow this link for details on how to create the profiles.yml file that suits your needs.
+
+Below is a sample profile used to connect to a BigQuery dataset:
+```
+dbt_codegen_dl:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: <full path of a service account key file>
+      project: <gcp project>
+      dataset: <gcp dataset>
+      threads: 1
+      timeout_seconds: 300
+      location: <location>
+      priority: interactive
+```
+
 ## Fetch dbt dependencies
 ```bash
 dbt deps
