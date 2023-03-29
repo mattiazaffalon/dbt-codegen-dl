@@ -31,6 +31,12 @@ dbt_codegen_dl:
       location: <location>
       priority: interactive
 ```
+dbt will search the "profiles.yml" file in the current directory of the command being run, and, if not found, will default to ~/.dbt/.
+
+To test connection to the database, run:
+```bash
+dbt debug
+```
 
 ## Fetch dbt dependencies
 ```bash
