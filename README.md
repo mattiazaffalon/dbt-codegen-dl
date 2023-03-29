@@ -13,7 +13,7 @@ pip install -r requirements.txt
 ```
 
 ## Setup dbt environment
-In order to use dbt cli, you need to setup a profiles.yml file to tell dbt how to connect to the database target of the transformations. Follow this link for details on how to create the profiles.yml file that suits your needs.
+In order to use dbt cli, you need to setup a profiles.yml file to tell dbt how to connect to the database target of the transformations. Follow this link for details on how to create the profiles.yml file that suits your needs: https://docs.getdbt.com/reference/profiles.yml.
 
 Below is a sample profile used to connect to a BigQuery dataset:
 ```
